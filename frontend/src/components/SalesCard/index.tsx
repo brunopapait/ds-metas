@@ -84,7 +84,6 @@ export function SalesCard() {
               </td>
             </tr>
           </tbody>
-
         </table>
       </div>
     </div>
