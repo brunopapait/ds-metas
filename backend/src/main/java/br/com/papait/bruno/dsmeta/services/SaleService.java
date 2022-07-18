@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.ZoneId;
+import java.util.Optional;
 
 @Service
 public class SaleService {
@@ -26,5 +27,9 @@ public class SaleService {
 		LocalDate max = maxDate.equals("") ? today : LocalDate.parse(maxDate);
 
 		return saleRepository.findSales(min, max, pageable);
+	}
+
+	public Optional<Sale> findSaleById(Long id) {
+		return saleRepository.findById(id);
 	}
 }
